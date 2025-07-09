@@ -277,6 +277,6 @@ app.get('/api/export', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://13.53.101.150:${port}`);
-});
+
+   const PORT = process.env.PORT || 3603;
+app.listen(PORT, () => console.log(`Server running at http://13.53.101.150:${PORT}`));
