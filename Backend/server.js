@@ -8,7 +8,7 @@ const port = 3603;
 // PostgreSQL connection
 const pool = new Pool({
     user: 'postgres',
-    host: 'attendance-postgres',
+    host: 'postgres',
     database: 'attendance_db',
     password: 'admin123',
     port: 5432,
