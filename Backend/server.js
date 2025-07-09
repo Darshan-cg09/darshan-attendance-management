@@ -94,7 +94,9 @@ app.post('/api/punch-out', async (req, res) => {
             WHERE employee_id = $1 AND DATE(punch_in) = $2
         `, [employeeId, today]);
 
-        const hours = parseFloat(hoursWorked.rows[0].hours.toFixed(2));
+        const rawHours = hoursWorked.rows[0].hours;
+const hours = rawHours ? parseFloat(rawHours).toFixed(2) : '0.00';
+
         let attendanceStatus;
         if (hours >= 8) attendanceStatus = 'Present';
         else if (hours >= 4) attendanceStatus = 'Half Day Present';
