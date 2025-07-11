@@ -20,7 +20,7 @@ services:
       context: ./Backend
     container_name: attendance-backend
     ports:
-      - "3619:3619"
+      - "3620:3620"
     depends_on:
       - postgres
     environment:
@@ -37,7 +37,7 @@ services:
       context: ./Employee-Attendance
     container_name: employee-attendance
     ports:
-      - "8629:80"
+      - "8630:80"
     depends_on:
       - backend
     networks:
@@ -48,7 +48,7 @@ services:
       context: ./HR-Attendance
     container_name: hr-attendance
     ports:
-      - "8630:80"
+      - "8631:80"
     depends_on:
       - backend
     networks:
