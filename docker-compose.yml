@@ -20,7 +20,7 @@ services:
       context: ./Backend
     container_name: attendance-backend
     ports:
-      - "3620:3620"
+      - "3618:3618"
     depends_on:
       - postgres
     environment:
