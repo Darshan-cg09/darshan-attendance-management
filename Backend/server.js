@@ -3,14 +3,14 @@ const { Pool } = require('pg');
 const cors = require('cors');
 const path = require('path');
 const app = express();
-const port = 3620;
+const port = 3605;
 
 // PostgreSQL connection
 const pool = new Pool({
     user: 'postgres',
     host: 'postgres',
     database: 'attendance_db',
-    password: 'admin321',
+    password: 'admin123',
     port: 5432,
 });
 
